@@ -1,0 +1,23 @@
+:root{
+    --dark: rgb(18, 18, 18);/*#121212*/
+    --dark-text: rgb(212, 212, 212);/*#d4d4d4*/
+}
+*{
+    background-color: var(--dark);
+    color: var(--dark-text);
+    cursor: url(/img/icon/light/cursor.png), default;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--dark-text);
+}
+/*
+-------------------
+checkbox-theme
+-------------------
+*/
+input[type=checkbox]{
+    background-color: var(--dark-text);
+}
+input[type=checkbox]::after{
+    background-color: var(--dark);
+}

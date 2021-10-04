@@ -1,0 +1,46 @@
+/*
+    animation: show 3s 1s forwards;
+    animation: transformMenu 2s 0s forwards;
+    название анимации |
+    длительность анимации |
+    после загрусски сраницы (1s+) Сразу (0s) |
+    количество повторов
+    forwards остаться в конечном состоянии анимации
+*/
+
+.transform-menu{
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+.transform-menu-show{
+    animation-name: transformMenu;
+}
+
+.transform-menu-hide{
+    animation-name: transformMenu2;
+}
+
+@keyframes transformMenu{
+    0% {
+        transform: translate(0, 500px);
+    }
+    80%{
+        transform: translate(0, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes transformMenu2{
+    0% {
+        transform: translate(0, 0);
+    }
+    80%{
+        transform: translate(0, -100px);
+    }
+    100% {
+        transform: translate(0, 500px);
+    }
+}
