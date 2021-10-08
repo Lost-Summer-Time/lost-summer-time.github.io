@@ -2,7 +2,6 @@ function phoneMenu(){
     let bodySizeWidth = document.getElementById("body").clientWidth;
     let mainSizeWidth = document.getElementById("main").clientWidth;
     if(bodySizeWidth<=470){
-        headerOne.classList.add("displayNone");
         headerTwo.classList.add("positionFixed");
         headerTwo.classList.add("bottom0");
         headerTwo.classList.add("padding10");
@@ -10,14 +9,11 @@ function phoneMenu(){
         headerTwo.style.maxWidth=mainSizeWidth+"px";
         headerTwoNav.classList.add("widthFull");
         headerTwoUl.classList.add("widthFull");
-        homeLi.classList.add("widthFull");
         homeP.classList.add("displayNone");
         homeImg.classList.remove("height24");
-        libraryLi.classList.add("widthFull");
         libraryLi.classList.remove("marginLeft10px");
         libraryP.classList.add("displayNone");
         libraryImg.classList.remove("height24");
-        messagesLi.classList.add("widthFull");
         messagesLi.classList.remove("marginLeft10px");
         messagesP.classList.add("displayNone");
         messagesImg.classList.remove("height24");
@@ -25,7 +21,6 @@ function phoneMenu(){
         basement.classList.remove("displayNone");
         menuLi.classList.remove("displayNone");
     }else{
-        headerOne.classList.remove("displayNone");
         headerTwo.classList.remove("positionFixed");
         headerTwo.classList.remove("bottom0");
         headerTwo.classList.remove("padding10");
@@ -33,14 +28,11 @@ function phoneMenu(){
         headerTwo.style.maxWidth="";
         headerTwoNav.classList.remove("widthFull");
         headerTwoUl.classList.remove("widthFull");
-        homeLi.classList.remove("widthFull");
         homeP.classList.remove("displayNone");
         homeImg.classList.add("height24");
-        libraryLi.classList.remove("widthFull");
         libraryLi.classList.add("marginLeft10px");
         libraryP.classList.remove("displayNone");
         libraryImg.classList.add("height24");
-        messagesLi.classList.remove("widthFull");
         messagesLi.classList.add("marginLeft10px");
         messagesP.classList.remove("displayNone");
         messagesImg.classList.add("height24");

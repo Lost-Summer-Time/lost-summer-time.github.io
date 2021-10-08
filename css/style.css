@@ -106,6 +106,9 @@ flex component
 .justifyContentSpaceBetween{
     justify-content: space-between;
 }
+.justifyContentFlexEnd{
+    justify-content: flex-end;
+}
 /*
 -------------------
 

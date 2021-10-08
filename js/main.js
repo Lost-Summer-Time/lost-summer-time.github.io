@@ -1,7 +1,6 @@
 let cookie_path = "path=/; expires=Tue, 01 Jan 2033 00:00:00 GMT;";
 let cssTheme = document.getElementById("cssTheme");
 let checkboxTheme = document.getElementById("checkboxTheme");
-let headerOne = document.getElementById("headerOne");
 let headerTwo = document.getElementById("headerTwo");
 let headerTwoNav = document.getElementById("headerTwoNav");
 let headerTwoUl = document.getElementById("headerTwoUl");
