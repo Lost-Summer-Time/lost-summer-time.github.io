@@ -2,6 +2,7 @@ function phoneMenu(){
     let bodySizeWidth = document.getElementById("body").clientWidth;
     let mainSizeWidth = document.getElementById("main").clientWidth;
     if(bodySizeWidth<=470){
+        header.classList.remove("justifyContentFlexEnd")
         headerTwo.classList.add("positionFixed");
         headerTwo.classList.add("bottom0");
         headerTwo.classList.add("padding10");
@@ -21,6 +22,7 @@ function phoneMenu(){
         basement.classList.remove("displayNone");
         menuLi.classList.remove("displayNone");
     }else{
+        header.classList.add("justifyContentFlexEnd")
         headerTwo.classList.remove("positionFixed");
         headerTwo.classList.remove("bottom0");
         headerTwo.classList.remove("padding10");
