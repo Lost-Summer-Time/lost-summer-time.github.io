@@ -31,6 +31,10 @@ img{
     width: 32px;
     height: 32px;
 }
+.img24{
+    width: 24px;
+    height: 24px;
+}
 /*
 ------------------
 width and height
@@ -45,9 +49,6 @@ width and height
 }
 .heightFull{
     height: 100%;
-}
-.height24{
-    height: 24px;
 }
 /*
 --------------------------------

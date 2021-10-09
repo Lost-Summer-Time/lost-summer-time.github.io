@@ -1,23 +1,21 @@
 function phoneMenu(){
-    let bodySizeWidth = document.getElementById("body");
-    let mainSizeWidth = document.getElementById("main");
-    if(bodySizeWidth.clientWidth<=470){
+    if(body.clientWidth<=470){
         header.classList.remove("justifyContentFlexEnd")
         headerTwo.classList.add("positionFixed");
         headerTwo.classList.add("bottom0");
         headerTwo.classList.add("padding10");
         headerTwo.classList.add("widthFull");
-        headerTwo.style.maxWidth=mainSizeWidth.clientWidth+"px";
+        headerTwo.style.maxWidth=main.clientWidth+"px";
         headerTwoNav.classList.add("widthFull");
         headerTwoUl.classList.add("widthFull");
         homeP.classList.add("displayNone");
-        homeImg.classList.remove("height24");
+        homeImg.classList.remove("img24");
         libraryLi.classList.remove("marginLeft10px");
         libraryP.classList.add("displayNone");
-        libraryImg.classList.remove("height24");
+        libraryImg.classList.remove("img24");
         messagesLi.classList.remove("marginLeft10px");
         messagesP.classList.add("displayNone");
-        messagesImg.classList.remove("height24");
+        messagesImg.classList.remove("img24");
         checkboxThemeLi.classList.add("displayNone");
         basement.classList.remove("displayNone");
         menuLi.classList.remove("displayNone");
@@ -31,13 +29,13 @@ function phoneMenu(){
         headerTwoNav.classList.remove("widthFull");
         headerTwoUl.classList.remove("widthFull");
         homeP.classList.remove("displayNone");
-        homeImg.classList.add("height24");
+        homeImg.classList.add("img24");
         libraryLi.classList.add("marginLeft10px");
         libraryP.classList.remove("displayNone");
-        libraryImg.classList.add("height24");
+        libraryImg.classList.add("img24");
         messagesLi.classList.add("marginLeft10px");
         messagesP.classList.remove("displayNone");
-        messagesImg.classList.add("height24");
+        messagesImg.classList.add("img24");
         checkboxThemeLi.classList.remove("displayNone");
         basement.classList.add("displayNone");
         menuLi.classList.add("displayNone");
@@ -52,9 +50,9 @@ function phoneMenuFullScreen(){
     homeP.classList.toggle("displayNone");
     libraryP.classList.toggle("displayNone");
     messagesP.classList.toggle("displayNone");
-    homeImg.classList.toggle("height24");
-    libraryImg.classList.toggle("height24");
-    messagesImg.classList.toggle("height24");
+    homeImg.classList.toggle("img24");
+    libraryImg.classList.toggle("img24");
+    messagesImg.classList.toggle("img24");
     libraryLi.classList.toggle("marginTop10");
     messagesLi.classList.toggle("marginTop10");
     menuLi.classList.toggle("marginTop10");

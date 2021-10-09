@@ -1,5 +1,9 @@
 let cookie_path = "path=/; expires=Tue, 01 Jan 2033 00:00:00 GMT;";
 let cssTheme = document.getElementById("cssTheme");
+let body = document.getElementById("body");
+let main = document.getElementById("main");
+//let header = document.getElementById("header");
+let basement = document.getElementById("basement");
 let checkboxTheme = document.getElementById("checkboxTheme");
 let headerTwo = document.getElementById("headerTwo");
 let headerTwoNav = document.getElementById("headerTwoNav");
@@ -17,6 +21,4 @@ let homeImg = document.getElementById("homeImg");
 let libraryImg = document.getElementById("libraryImg");
 let messagesImg = document.getElementById("messagesImg");
 let menuImg = document.getElementById("menuImg");
-let basement = document.getElementById("basement");
-let body = document.getElementById("body");
 let nameLi = document.getElementById("nameLi");
