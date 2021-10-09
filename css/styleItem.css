@@ -7,6 +7,10 @@
 #basement:empty{
     max-height: 42px;
 }
+.divText{
+    white-space: pre-line;
+    line-height: 24px;
+}
 /*
 -------------------
 checkbox-theme

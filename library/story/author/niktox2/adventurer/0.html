@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="heightFull displayFlex flexDirectionColumn center textCenter" id="content">
-            <div class="displayFlex" id="contentTextOne">
+            <div class="displayFlex" id="contentHeader">
                 <a name="start">
                     <div class="textCenter">
                         <p>Авантюрист</p>
@@ -62,7 +62,7 @@
                     </div>
                 </a>
             </div>
-            <div class="displayFlex marginTop10" id="contentTextTwo" style="white-space: pre-line; line-height: 24px;">- Вы слышали ? Карта снова унесла чью то жизнь. 
+            <div class="displayFlex marginTop10 divText" id="contentContent">- Вы слышали ? Карта снова унесла чью то жизнь. 
                 - Эх, видимо всегда найдутся те, кто решил найти себе приключения.
                 - А с чего все началось ?
                 - Ты не знаешь ? Сейчас даже ребенок знает про эту проклятую карту.
@@ -82,10 +82,10 @@
                 - Не все так же думаю парниш
                 У них начался гул, и я просто ушел. Многие рассказывают эту историю всем новым, или друг другу от скуки. Посмотрим, может и у меня она появится со временем.
             </div>
-            <div class="displayFlex widthFull padding10 justifyContentSpaceBetween" id="contentTextThree">
-                <a href="/library/story.html">Назад</a>
-                <a href="#start">Начало</a>
-                <a href="1.html">Далее</a>
+            <div class="displayFlex widthFull padding10 justifyContentSpaceBetween" id="contentBasement">
+                <a href="/library/story.html" class="padding5 aButton">Назад</a>
+                <a href="#start" class="padding5 aButton">Начало</a>
+                <a href="1.html" class="padding5 aButton">Далее</a>
             </div>
         </div>
         <div class="wHFull" id="basement"></div>
@@ -94,6 +94,16 @@
     <script src="/js/cookie.js"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/phoneMenu.js"></script>
-    <script src="/js/sizeFix.js"></script>
+    <script>
+        function fixSize(){
+            let contentHeader = document.getElementById("contentHeader").scrollHeight;
+            let contentContent = document.getElementById("contentContent").scrollHeight;
+            let contentBasement = document.getElementById("contentBasement").scrollHeight;
+            let basement = 62;
+            body.style.minHeight=contentHeader+contentContent+contentBasement+basement+"px"
+        }
+        fixSize();
+        window.addEventListener("resize",()=>{fixSize()});
+    </script>
 </body>
 </html>

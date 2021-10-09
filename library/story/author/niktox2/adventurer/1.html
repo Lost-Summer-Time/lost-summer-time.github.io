@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="heightFull displayFlex flexDirectionColumn center textCenter" id="content">
-            <div class="displayFlex" id="contentTextOne">
+            <div class="displayFlex" id="contentHeader">
                 <a name="start">
                     <div class="textCenter">
                         <p>Авантюрист</p>
@@ -62,7 +62,7 @@
                     </div>
                 </a>
             </div>
-            <div class="displayFlex marginTop10" id="contentTextTwo" style="white-space: pre-line; line-height: 24px;">Солнце с птицами всегда рано просыпаются, даже удивляет как они это делают. Слабый ветерок дует тебе в лицо, колышет листву, качает палатку. Как бы эти вещи приятными не были, все равно нужно идти умываться. Идешь к реке, немного привести себя в порядок, а там и черненькая подойдет.
+            <div class="displayFlex marginTop10 divText" id="contentContent">Солнце с птицами всегда рано просыпаются, даже удивляет как они это делают. Слабый ветерок дует тебе в лицо, колышет листву, качает палатку. Как бы эти вещи приятными не были, все равно нужно идти умываться. Идешь к реке, немного привести себя в порядок, а там и черненькая подойдет.
                 - Да, черненькая ? Тоже умыться захотела ?
                 И как всегда кроме фырка я ничего не услышал, будем считать что она сказала "Не называй меня так". Хотя она вроде и не против, по крайней мере не кусает меня. Умоется, попьет воды и уйдет обратно. Видимо мою просьбу охранять лагерь поняли слишком буквально. Мы же в лесу, тут редко кого можно встретить. В любом случае мы долго тут не останемся, посмотрим какие у нас запасы, и что нужно будет собрать перед уходом. Кто же мог подумать что там нас ждет..
                 - Карта...
@@ -152,7 +152,7 @@
                 - И тогда у меня останется 20 серебряных. Неплохо, по дороге можно будет что-то еще взять 
                 Вот мы и купили что нам может пригодится, теперь хоть не нужно боятся ударов. Видели броню варваров ? Она из кожи и железными деталями. Не сковывает движения, да и мне сделан из других материалов. Попрочней, и еще зачаровали. Теперь она и чинится еще сможет сама, такое ощущение что меня обманули. С мечем сделали тоже самое, но из чего он, мне так и не сказали. Весь черный, с белыми полосами. Видимо скопировал окрас лисы. Ну что же, нас научили, мы все собрали. С завтрашнего дня можно начинать наш далекий путь в неизвестное направление. Кто знает, может мы даже найдем места что еще не были исследовано..
             </div>
-            <div class="displayFlex widthFull padding10 justifyContentSpaceBetween" id="contentTextThree">
+            <div class="displayFlex widthFull padding10 justifyContentSpaceBetween" id="contentBasement">
                 <a href="/library/story/author/niktox2/adventurer/0.html">Назад</a>
                 <a href="#start">Начало</a>
                 <a href="/library/story.html">Далее</a>
@@ -164,6 +164,16 @@
     <script src="/js/cookie.js"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/phoneMenu.js"></script>
-    <script src="/js/sizeFix.js"></script>
+    <script>
+        function fixSize(){
+            let contentHeader = document.getElementById("contentHeader").scrollHeight;
+            let contentContent = document.getElementById("contentContent").scrollHeight;
+            let contentBasement = document.getElementById("contentBasement").scrollHeight;
+            let basement = 62;
+            body.style.minHeight=contentHeader+contentContent+contentBasement+basement+"px"
+        }
+        fixSize();
+        window.addEventListener("resize",()=>{fixSize()});
+    </script>
 </body>
 </html>
