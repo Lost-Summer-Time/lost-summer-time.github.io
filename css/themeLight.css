@@ -7,6 +7,16 @@
     color: var(--light-text);
     cursor: url(/img/icon/dark/cursor.png), default;
 }
+.aButton{
+    background-color: var(--light-text);
+    color: var(--light);
+    border-radius: 6px;
+}
+/*
+-------------------
+
+-------------------
+*/
 ::-webkit-scrollbar-thumb {
 	background-color: var(--light-text);
 }
