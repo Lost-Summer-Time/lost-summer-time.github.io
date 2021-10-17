@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="/css/themeDark.css" id="cssTheme">
-    <title>Программы</title>
+    <title>Сообщения</title>
 </head>
 <body class="wHFull padding10 displayFlex flexDirectionColumn" id="body">
     <div class="wHFull displayFlex flexDirectionColumn" id="main">
@@ -54,9 +54,27 @@
                 </nav>
             </div>
         </div>
-        <div class="heightFull displayFlex flexDirectionColumn center textCenter" id="content">
-            <a href="/library/windows/programs/obs.html">OBS</a>
-            <a href="/library/windows/programs/vscode.html" class="marginTop10">VSCode</a>
+        <div class="heightFull padding10 displayFlex center textCenter" id="content">
+            <div class="wHFull displayFlex flexDirectionColumn">
+                <div class="widthFull padding10 displayFlex flexDirectionColumn">
+                    <p>Сообщения</p>
+                </div>
+                <div class="widthFull padding10 displayFlex flexDirectionColumn">
+                    <p>Бот</p>
+                </div>
+            </div>
+            <div class="wHFull displayFlex flexDirectionColumn">
+                <div class="widthFull padding10 displayFlex flexDirectionColumn">
+                    <span id="nameUserChat"></span>
+                </div>
+                <div class="wHFull padding10 displayFlex positionRelative flexDirectionColumn overflow overflowXClip" id="fixScrollbar">
+                    <div class="widthFull displayFlex positionAbsolute flexDirectionColumn" id="allMessage"></div>
+                </div>
+                <div class="widthFull padding10 displayFlex">
+                    <input type="text" name="sendMessage" class="widthFull padding10 borderSolid1" id="sendMessage">
+                    <button onclick="sendMessageFunction()" class="width50">💬</button>
+                </div>
+            </div>
         </div>
         <div class="wHFull" id="basement"></div>
     </div>
@@ -64,5 +82,7 @@
     <script src="/js/cookie.js"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/phoneMenu.js"></script>
+    <script src="/js/messag.js"></script>
+    <script src="/js/date.js"></script>
 </body>
 </html>

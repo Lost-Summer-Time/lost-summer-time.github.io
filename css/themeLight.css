@@ -7,6 +7,10 @@
     color: var(--light-text);
     cursor: url(/img/icon/dark/cursor.png), default;
 }
+*::selection{
+    background-color: var(--light-text);
+    color: var(--light);
+}
 .aButton{
     background-color: var(--light-text);
     color: var(--light);

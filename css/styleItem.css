@@ -49,9 +49,13 @@ scrollbar
 	width: 0;
 	height: 0;
 	display: none;
+    background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
     background-clip: padding-box;
     border: 4px solid rgba(0,0,0,0);
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent
 }
