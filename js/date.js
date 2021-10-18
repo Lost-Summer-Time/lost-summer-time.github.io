@@ -6,9 +6,13 @@ const dayEn = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 const dayEng = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const dayEnglish = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+let v1;
+let v2;
+let v3;
+let time;
+
 function DataFunction(){
-    let date = new Date();
-    let a = String(date).split(" ");
+    let a  = String(new Date()).split(' ').join(',').split(':').join(',').split(',').join('(').split('(').join(')').split(')');
     let day;
     let dayRu;
     let dayRuMin;
@@ -174,5 +178,6 @@ function DataFunction(){
             monthEngMin="Dec";
             break
     }
+    v1=a[2]+" "+monthRu+" "+a[3]
+    time=a[4]+":"+a[5]
 };
-DataFunction()

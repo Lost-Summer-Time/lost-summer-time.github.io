@@ -32,12 +32,12 @@ textarea{
     outline: none;
 }
 img{
-    width: 32px;
-    height: 32px;
-}
-.img24{
     width: 24px;
     height: 24px;
+}
+.img32{
+    width: 32px;
+    height: 32px;
 }
 /*
 ------------------
@@ -116,6 +116,9 @@ display
 flex component
 ----------------
 */
+.flexDirectionColumnReverse{
+    flex-direction: column-reverse;
+}
 .flexDirectionColumn{
     flex-direction: column
 }
@@ -144,6 +147,9 @@ flex component
 .textCenter{
     text-align: center;
 }
+.textAlignLeft{
+    text-align: left;
+}
 .overflow{
     overflow: auto;
 }
@@ -155,4 +161,10 @@ flex component
 }
 .backgroundTransparent{
     background: transparent;
+}
+.wordBreakBreakAll{
+    word-break: break-all;
+}
+.overflowWrapAnywhere{
+    overflow-wrap: anywhere;
 }

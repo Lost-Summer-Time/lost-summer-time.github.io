@@ -9,16 +9,22 @@ function phoneMenu(){
         headerTwoNav.classList.add("widthFull");
         headerTwoUl.classList.add("widthFull");
         homeP.classList.add("displayNone");
-        homeImg.classList.remove("img24");
+        homeImg.classList.add("img32");
         libraryLi.classList.remove("marginLeft10px");
         libraryP.classList.add("displayNone");
-        libraryImg.classList.remove("img24");
+        libraryImg.classList.add("img32");
         messagesLi.classList.remove("marginLeft10px");
         messagesP.classList.add("displayNone");
-        messagesImg.classList.remove("img24");
+        messagesImg.classList.add("img32");
         checkboxThemeLi.classList.add("displayNone");
         basement.classList.remove("displayNone");
         menuLi.classList.remove("displayNone");
+    }
+};
+phoneMenu()
+window.addEventListener("resize",()=>{
+    if(body.clientWidth<=470){
+        phoneMenu()
     }else{
         header.classList.add("justifyContentFlexEnd")
         headerTwo.classList.remove("positionFixed");
@@ -29,20 +35,18 @@ function phoneMenu(){
         headerTwoNav.classList.remove("widthFull");
         headerTwoUl.classList.remove("widthFull");
         homeP.classList.remove("displayNone");
-        homeImg.classList.add("img24");
+        homeImg.classList.remove("img32");
         libraryLi.classList.add("marginLeft10px");
         libraryP.classList.remove("displayNone");
-        libraryImg.classList.add("img24");
+        libraryImg.classList.remove("img32");
         messagesLi.classList.add("marginLeft10px");
         messagesP.classList.remove("displayNone");
-        messagesImg.classList.add("img24");
+        messagesImg.classList.remove("img32");
         checkboxThemeLi.classList.remove("displayNone");
         basement.classList.add("displayNone");
         menuLi.classList.add("displayNone");
     }
-};
-phoneMenu();
-window.addEventListener("resize",()=>{phoneMenu()});
+});
 function phoneMenuFullScreen(){
     headerTwo.classList.toggle("wHFull");
     headerTwoUl.classList.toggle("flexDirectionColumn");

@@ -1,5 +1,6 @@
 if (document.cookie == ""){
-    document.cookie = "theme=dark; "+cookie_path;
+    document.cookie = "theme=dark; lang=ru; "+cookie_path;
+    document.cookie = "lang=ru; "+cookie_path;
 }else{
     let whatTheme = document.cookie.match(/theme=(.+?)(;|$)/)[1];
     if (whatTheme == "dark"){
