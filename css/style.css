@@ -19,6 +19,7 @@ a{
 button,
 input{
     border-style: none;
+    background-color: transparent;
 }
 input{
     outline: none;
@@ -167,4 +168,7 @@ flex component
 }
 .overflowWrapAnywhere{
     overflow-wrap: anywhere;
+}
+.overflowHidden{
+    overflow: hidden;
 }

@@ -3,13 +3,18 @@
     --dark-text: rgb(212, 212, 212);/*#d4d4d4*/
 }
 *{
-    background-color: var(--dark);
     color: var(--dark-text);
     cursor: url(/img/icon/light/cursor.png), default;
 }
 *::selection{
     background-color: var(--dark-text);
     color: var(--dark);
+}
+body{
+    background-color: var(--dark);
+}
+#menu{
+    background: rgba(18, 18, 18, 0.97);
 }
 .aButton{
     background-color: var(--dark-text);
