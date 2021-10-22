@@ -22,7 +22,7 @@ let basement = document.getElementById("basement");
 // ----------
 function phoneMenu(){
     fixJCFE.classList.remove("justifyContentFlexEnd");
-    menu.classList.add("positionAbsolute","bottom0","widthFull");
+    menu.classList.add("menuFixed","widthFull","padding10");
     // ----------
     liLibrary.classList.remove("marginLeft10px");
     liMessages.classList.remove("marginLeft10px");
@@ -42,7 +42,7 @@ function phoneMenu(){
 // ----------
 function desktopMenu(){
     fixJCFE.classList.add("justifyContentFlexEnd");
-    menu.classList.remove("positionFixed","bottom0","widthFull","positionAbsolute");
+    menu.classList.remove("menuFixed","widthFull","padding10");
     // ----------
     liLibrary.classList.add("marginLeft10px");
     liMessages.classList.add("marginLeft10px");

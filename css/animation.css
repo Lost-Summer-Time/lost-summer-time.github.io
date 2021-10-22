@@ -8,6 +8,21 @@
     forwards остаться в конечном состоянии анимации
 */
 
+#main{
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-name: showMain;
+}
+
+@keyframes showMain{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .transformMenu{
     animation-duration: 2s;
     animation-delay: 0s;

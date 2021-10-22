@@ -16,11 +16,6 @@ body{
 #menu{
     background: rgba(18, 18, 18, 0.97);
 }
-.aButton{
-    background-color: var(--dark-text);
-    color: var(--dark);
-    border-radius: 6px;
-}
 .card{
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.07);
