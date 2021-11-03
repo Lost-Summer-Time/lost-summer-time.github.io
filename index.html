@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- style="min-width: 320px; min-height: 400px;" -->
 <html lang="ru" class="wHFull">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,7 @@
     <meta property="og:url" content="https://lost-summer-time.github.io">
     <meta property="og:site_name" content="Lost Summer Time">
     <meta property="og:title" content="Lost Summer Time">
+    <meta property="og:description" content="Главная страницы ¯\_(ツ)_/¯">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" href="/img/icon/dark/favicon-black-32.png">
     <link rel="apple-touch-icon" href="/img/icon/dark/favicon-black-192.png">
@@ -16,6 +16,19 @@
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="/css/themeDark.css" id="cssTheme">
+    <script>
+        let device;
+        let cookiePath = "path=/; expires=Tue, 01 Jan 2033 00:00:00 GMT;";
+        document.cookie = "theme=dark; " + cookiePath;
+        document.cookie = "lang=ru; " + cookiePath;
+        if (document.querySelector("html").clientWidth < 444) {
+            document.cookie = "device=phone; " + cookiePath;
+            device="phone";
+        }else{
+            document.cookie = "device=pc; " + cookiePath;
+            device="pc";
+        }
+    </script>
     <title>Lost Summer Time</title>
 </head>
 <body class="wHFull padding10 displayFlex flexDirectionColumn" id="body">
@@ -58,6 +71,25 @@
                 </nav>
             </div>
         </div>
+        <script>
+            if(device == "phone"){
+                document.getElementById("fixJCFE").classList.remove("justifyContentFlexEnd");
+                document.getElementById("menu").classList.add("menuFixed","widthFull","padding10");
+                // ----------
+                document.getElementById("liLibrary").classList.remove("marginLeft10px");
+                document.getElementById("liMessages").classList.remove("marginLeft10px");
+                document.getElementById("liCheckboxTheme").classList.add("displayNone");
+                document.getElementById("liMenu").classList.remove("displayNone");
+                // ----------
+                document.getElementById("imgHome").classList.add("img32");
+                document.getElementById("imgLibrary").classList.add("img32");
+                document.getElementById("imgMessages").classList.add("img32");
+                // ----------
+                document.getElementById("pHome").classList.add("displayNone");
+                document.getElementById("pLibrary").classList.add("displayNone");
+                document.getElementById("pMessages").classList.add("displayNone");
+            }
+        </script>
         <div class="heightFull displayFlex center">
             <div class="heightFull displayFlex flexDirectionColumn center textCenter" id="content">
                 <p>Добро пожаловать в забытое,</p>
@@ -70,6 +102,11 @@
             </div>
         </div>
         <div class="wHFull displayNone" id="basement"></div>
+        <script>
+            if(device == "phone"){
+                document.getElementById("basement").classList.remove("displayNone");
+            }
+        </script>
     </div>
     <script src="/js/main.js"></script>
     <script src="/js/cookie.js"></script>

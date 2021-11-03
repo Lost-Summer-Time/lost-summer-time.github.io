@@ -67,10 +67,13 @@ window.addEventListener("resize",()=>{
         desktopMenu()
     }
 });
-// ----------
-if(document.querySelector("body").clientWidth<=470){
+
+// ---------- document.querySelector("body").clientWidth<=470
+/*
+if(device == "phone"){
     phoneMenu()
 }
+*/
 // ----------
 function phoneMenuFullScreen(){
     let ul = document.querySelector("#menu nav ul")
