@@ -1,2 +1,15 @@
-# Site Lost Summer Time
-Site - https://lost-summer-time.github.io
+# [Lost Summer Time](https://lost-summer-time.github.io/)
+
+Хай, это моя первая попытка в написании сайта 
+И да, я настолько сильно обноглел, что пишу тут на русском 
+
+### Использовало
+- Html
+- Css
+- Js
+
+Без какие либо дополнений
+
+Шрифт - Roboto
+Темная тема основной цвет - rgb(18, 18, 18)
+Светлая тема основной цвет - rgb(238, 238, 238)
