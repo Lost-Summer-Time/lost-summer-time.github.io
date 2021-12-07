@@ -80,8 +80,11 @@ ul{
 .heightFull{
     height: 100%;
 }
-.padding10{
+.padding10px{
     padding: 10px;
+}
+.paddingLR10px{
+    padding: 0 10px 0;
 }
 .marginLeft10px{
     margin-left: 10px;
@@ -138,10 +141,30 @@ ul{
 /*--- ---*/
 /*--- ---*/
 /*--- ---*/
+#menu{
+    z-index: 50;
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0px 0px 20px 40px var(--backgroundColor);
+}
 .menuText{
     font-weight: bold; 
     font-size: 1.3rem; 
     text-decoration: underline;
+}
+.divText{
+    white-space: pre-line;
+    line-height: 1.5rem;
+}
+.overflowYScroll{
+    overflow-y: scroll;
+}
+.divLine{
+    display: flex;
+    height: 2px;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 1px;
+    background-color: var(--backgroundColor2);
 }
 /*--- ---*/
 /*--- ---*/
