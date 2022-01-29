@@ -34,7 +34,7 @@ html[data-theme='dark']{
     font-size: 1rem;
     color: var(--textColor);
     cursor: var(--cursor), default;
-    transition: all 0.3s ease-out;
+    /*transition: all 0.3s ease-out;*/
 }
 *::selection{
     background-color: var(--backgroundColor2);
@@ -43,7 +43,6 @@ html[data-theme='dark']{
 
 /*--- ---*/
 html{
-    min-width: 300px;
     scroll-behavior: smooth;
 }
 body{
@@ -166,9 +165,6 @@ ul{
     margin: 1rem auto;
     border-radius: 1px;
     background-color: var(--backgroundColor2);
-}
-#menu nav ul li{
-    align-items: center;
 }
 /*--- ---*/
 /*--- ---*/

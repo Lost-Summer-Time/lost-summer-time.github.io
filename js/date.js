@@ -12,7 +12,7 @@ let v3;
 let time;
 
 function DataFunction(){
-    let a  = String(new Date()).split(' ').join(',').split(':').join(',').split(',').join('(').split('(').join(')').split(')');
+    let a = String(new Date()).split(' ').join(',').split(':').join(',').split(',').join('(').split('(').join(')').split(')');
     let day;
     let dayRu;
     let dayRuMin;
@@ -178,6 +178,6 @@ function DataFunction(){
             monthEngMin="Dec";
             break
     }
-    v1=a[2]+" "+monthRu+" "+a[3]
-    time=a[4]+":"+a[5]
+    v1=a[2] + " " + monthRu + " " + a[3]
+    time=a[4] + ":" + a[5]
 };
