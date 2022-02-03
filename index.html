@@ -33,6 +33,20 @@
                 break;
         }
     </script>
+    <script>
+        let user = detect.parse(navigator.userAgent);
+        console.log(user.browser.family)
+        switch (user.browser.family) {
+            case "Chrome":
+                document.documentElement.setAttribute("data-browser", "chrome");
+                localStorage.setItem("data-browser", "chrome");
+                break;
+            case "Firefox":
+                document.documentElement.setAttribute("data-browser", "firefox");
+                localStorage.setItem("data-browser", "firefox");
+                break;
+        }
+    </script>
 </head>
 <body class="wHFull displayFlex flexDirectionColumn">
 <script>
