@@ -12,12 +12,12 @@
         <link rel="manifest" href="/favicon/manifest.json">
         <link rel="stylesheet" href="/css/style.css" id="linkCssTheme">
         <script src="/js/core.js"></script>
-
+        <script>let phoneSize = 430;</script>
     </head>
     <body>
         <div id="pc">
             <script>
-                if (document.body.clientWidth <= 430) {
+                if (document.body.clientWidth <= phoneSize) {
                     document.getElementById("linkCssTheme").href = "/css/phone.css";
                     document.getElementById("pc").remove();
                 }
@@ -191,7 +191,7 @@
         </div>
         <div id="phone">
             <script>
-                if (document.body.clientWidth > 360) {
+                if (document.body.clientWidth > phoneSize) {
                     document.getElementById("phone").remove();
                 }
             </script>
