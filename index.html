@@ -1,159 +1,240 @@
 <!DOCTYPE html>
-<html lang="ru" class="wHFull">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="rgb(18, 18, 18)">
-    <meta property="og:url" content="https://lost-summer-time.github.io">
-    <meta property="og:site_name" content="Lost Summer Time">
-    <meta property="twitter:site" content="Lost Summer Time">
-    <meta property="og:title" content="Lost Summer Time">
-    <meta property="twitter:title" content="Lost Summer Time">
-    <meta property="og:description" content="Главная страницы ¯\_(ツ)_/¯">
-    <meta property="twitter:description" content="Главная страницы ¯\_(ツ)_/¯">
-    <meta property="twitter:creator" content="niktox2">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" href="/img/icon/dark/favicon-black-32.png">
-    <link rel="apple-touch-icon" href="/img/icon/dark/favicon-black-192.png">
-    <link rel="stylesheet" href="/css/style.css">
-    <script>
-        switch (localStorage.getItem("data-theme")) {
-            case "dark":
-                document.documentElement.setAttribute("data-theme", "dark");
-                localStorage.setItem("data-theme", "dark");
-                break;
-            case "light":
-                document.documentElement.setAttribute("data-theme", "light");
-                localStorage.setItem("data-theme", 'light');
-                break;
-            default:
-                document.documentElement.setAttribute("data-theme", "dark");
-                localStorage.setItem("data-theme", "dark");
-                break;
-        }
-    </script>
-    <script>
-        let user = detect.parse(navigator.userAgent);
-        console.log(user.browser.family)
-        switch (user.browser.family) {
-            case "Chrome":
-                document.documentElement.setAttribute("data-browser", "chrome");
-                localStorage.setItem("data-browser", "chrome");
-                break;
-            case "Firefox":
-                document.documentElement.setAttribute("data-browser", "firefox");
-                localStorage.setItem("data-browser", "firefox");
-                break;
-        }
-    </script>
-</head>
-<body class="wHFull displayFlex flexDirectionColumn">
-<script>
-    if (document.body.clientWidth <= 360) {
-        document.documentElement.setAttribute("data-device", "phone");
-        localStorage.setItem("data-device", 'phone');
-        document.body.style.padding = "10px";
-    }
-    else {
-        document.documentElement.setAttribute("data-device", "pc");
-        localStorage.setItem("data-device", 'pc');
-    }
-</script>
-<div class="wHFull displayFlex positionRelative flexDirectionColumn" style="max-width: 1200px; margin: 0 auto;">
-    <div class="padding10px displayFlex justifyContentSpaceBetween">
-        <div class="displayFlex flexDirectionColumn center">
-            <p>Lost Summer Time</p>
-            <p style="font-size: 10px;">NiktoX2</p>
-        </div>
-        <div class="displayFlex">
-            <button class="displayFlex flexDirectionColumn justifyContentSpaceEvenly" id="buttonMenu" onclick='document.getElementById("menu").classList.toggle("displayNone"); document.getElementById("menu").classList.toggle("displayFlex")'>
-                <span class="displayFlex menuLine menuLineLeft"></span>
-                <span class="displayFlex menuLine"></span>
-                <span class="displayFlex menuLine menuLineRight"></span>
-            </button>
-        </div>
-    </div>
-    <div class="heightFull displayFlex positionRelative center overflowYScroll">
-        <div class="wHFull padding10px displayNone flexDirectionColumn positionAbsolute center" id="menu">
-            <div class="widthFull displayFlex flexDirectionColumn overflowYScroll">
-                <div class="displayFlex flexDirectionColumn" style="width: 100%;">
-                    <nav class="displayFlex">
-                        <ul class="displayFlex flexDirectionColumn" style="width: 100%;">
-                            <li class="displayFlex flexDirectionColumn">
-                                <a href="/" class="displayFlex menuText">Главная</a>
-                                <p style="margin-top: 10px;">Просто главная старница</p>
-                            </li>
-                            <li class="displayFlex flexDirectionColumn" style="margin-top: 20px;">
-                                <a href="/story.html" class="displayFlex menuText">Рассказы</a>
-                                <p style="margin-top: 10px;">Рассказы от NiktoX2</p>
-                            </li>
-                            <li  class="displayFlex flexDirectionColumn" style="margin-top: 20px;">
-                                <a href="/windows.html" class="displayFlex menuText">Windows</a>
-                                <p style="margin-top: 10px;">Всякое что связанно с виндой</p>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="divLine"></div>
-                <div class="displayFlex flexDirectionColumn" style="width: 100%;">
-                    <p class="displayFlex center" style="font-size: 18px; font-weight: bold;">Настройки</p>
-                    <div class="displayFlex center" style="margin-top: 20px;">
-                        <p style="font-size: 20px;">Светлая тема</p>
-                        <label class="switch marginLeft10px">
-                            <input type="checkbox" id="checkboxTheme">
-                            <span class="slider"></span>
-                            <script>
-                                const checkbox = document.getElementById("checkboxTheme");
-                                // -----
-                                checkbox.addEventListener("change", () => {
-                                    //
-                                    const theme = localStorage.getItem("data-theme");
-                                    const themeDocument = document.documentElement.getAttribute("data-theme");
-                                    //
-                                    if (themeDocument != null) {
-                                        switch (theme) {
-                                            case "dark":
-                                                document.documentElement.setAttribute("data-theme", "light");
-                                                localStorage.setItem("data-theme", 'light');
-                                                break;
-                                            case "light":
-                                                document.documentElement.setAttribute("data-theme", "dark");
-                                                localStorage.setItem("data-theme", "dark");
-                                                break;
-                                        }
-                                    }
-                                    else {
-                                        switch (themeDocument) {
-                                            case "dark":
-                                                document.documentElement.setAttribute("data-theme", "light");
-                                                localStorage.setItem("data-theme", 'light');
-                                                break;
-                                            case "light":
-                                                document.documentElement.setAttribute("data-theme", "dark");
-                                                localStorage.setItem("data-theme", "dark");
-                                                break;
-                                        }
-                                    }
-                                });
-                                // -----
-                                if (localStorage.getItem("data-theme") == "light"){
-                                    checkbox.checked=true;
-                                    document.documentElement.setAttribute("data-theme", "light")
-                                }
-                            </script>
-                        </label>
-                    </div>
-                </div>
+<html lang="ru" >
+    <head>
+        <title>Главная</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="rgb(18, 18, 18)">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/black/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/black/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/black/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <link rel="stylesheet" href="/css/style.css" id="linkCssTheme">
+        <script src="/js/core.js"></script>
+
+    </head>
+    <body>
+        <div id="pc">
+            <script>
+                if (document.body.clientWidth <= 360) {
+                    document.getElementById("linkCssTheme").href = "/css/phone.css";
+                    document.getElementById("pc").remove();
+                }
+            </script>
+            <header>
+            <div class="lst">Lost Summer Time</div>
+        </header>
+
+            <main>
+                <div id="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M12 3L4 9v12h5v-7h6v7h5V9z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-home">Главная</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/profile.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-profile">Профиль</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/messages.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M4 4h16v12H5.17L4 17.17V4m0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4zm2 10h12v2H6v-2zm0-3h12v2H6V9zm0-3h12v2H6V6z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-messages">Сообщения</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/groups.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-groups">Группы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/music.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-7.5-1c1.38 0 2.5-1.12 2.5-2.5V7h3V5h-4v5.51c-.42-.32-.93-.51-1.5-.51-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-music">Музыка</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/video.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zM12 5.5v9l6-4.5z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-video">Видео</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/story.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-story">Рассказы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/windows.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                        <g>
+                                            <rect fill="none" height="24" width="24" y="0"/>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M20,3H4C2.9,3,2,3.9,2,5v11c0,1.1,0.9,2,2,2h3l-1,1v2h12v-2l-1-1h3c1.1,0,2-0.9,2-2V5C22,3.9,21.1,3,20,3z M20,16H4V5h16 V16z"/>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span id="lang-windows">Windows</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/games.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                                        <path d="M13 4v2.67l-1 1-1-1V4h2m7 7v2h-2.67l-1-1 1-1H20M6.67 11l1 1-1 1H4v-2h2.67M12 16.33l1 1V20h-2v-2.67l1-1M15 2H9v5.5l3 3 3-3V2zm7 7h-5.5l-3 3 3 3H22V9zM7.5 9H2v6h5.5l3-3-3-3zm4.5 4.5l-3 3V22h6v-5.5l-3-3z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-games">Игры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/apps.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+                                    </svg>
+                                </span>
+                                <span id="lang-apps">Приложения</span>
+                            </a>
+                        </li>
+                        <li style="position: relative; margin-top: 24px;">
+                            <label>
+                                <input type="checkbox" name="theme" id="theme">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                        <li style="justify-content: space-evenly">
+                            <button onclick="langRu()">Ru</button>
+                            <button onclick="langEn()">En</button>
+                        </li>
+                        <li>
+                            <a href="/settings.php">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px">
+                                        <g>
+                                            <path d="M0,0h24v24H0V0z" fill="none"/>
+                                            <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span id="lang-settings">Настройки</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+
+                <div id="content" style="flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="text-align: center; padding: 0 3rem 4rem 0;">
+                        Виии <br>
+                        Это главная страничка, как у тебя дела? <br>
+                        Да, осомотрись, понажимай на все
+                    </p>
+                </div>
+            </main>
+            <footer>
+            <p>NiktoX2 | 2022</p>
+        </footer>
+
+            <script src="/js/footer.js"></script>
+            <script src="/js/sizechanges.js"></script>
+            <script src="/js/lang.js"></script>
         </div>
-        <div class="heightFull displayFlex flexDirectionColumn center">
-            <p>Добро пожаловать в забытое,</p>
-            <p>а возможно в потеренное место.</p>
-            <p>Мы всегда рады новым лицам,</p>
-            <p>и.. Мы рады чем-то помочь.</p>
+        <div id="phone">
+            <script>
+                if (document.body.clientWidth > 360) {
+                    document.getElementById("phone").remove();
+                }
+            </script>
+            <header>
+                <div>Lost Summer Time</div>
+            </header>
+            <main>
+                <p>
+                    Виии <br>
+                    Это главная страничка, как у тебя дела? <br>
+                    Да, осомотрись, понажимай на все
+                </p>
+            </main>
+            <footer>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 3L4 9v12h5v-7h6v7h5V9z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>

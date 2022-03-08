@@ -1,0 +1,31 @@
+{
+    "name": "Lost Summer Time",
+    "short_name": "Lost Summer Time",
+    "description": "Lost Summer Time | By NiktoX2",
+    "icons": [
+        {
+            "src": "/favicon/black/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/black/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/black/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/black/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "rgb(18, 18, 18)",
+    "theme_color": "rgb(18, 18, 18)",
+    "display": "standalone"
+}

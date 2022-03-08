@@ -1,0 +1,11 @@
+html[data-theme='light'] {
+    --cursor: url(/cursor/black/cursor.png);
+}
+
+html[data-theme='dark'] {
+    --cursor: url(/cursor/white/cursor.png);
+}
+
+* {
+    cursor: var(--cursor), default;
+}
