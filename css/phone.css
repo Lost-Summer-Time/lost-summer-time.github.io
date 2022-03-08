@@ -110,3 +110,9 @@ svg {
     height: 32px;
     fill: var(--svg);
 }
+
+#phone {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
