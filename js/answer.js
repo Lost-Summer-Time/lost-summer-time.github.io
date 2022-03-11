@@ -11,26 +11,26 @@ question.textContent = textQuestion;
 
 answerUser.addEventListener("keyup", function(event) {
     if (event.code == "Enter" || event.key == "Enter") {
-        switch (answerUser.value.toLowerCase()) {
-            case "хорошо", "нормально":
-                question.textContent = "";
-                answerUser.value = ""
-                answerSite.textContent = testGood;
-                break;
-            case "плохо":
-                question.textContent = "";
-                answerUser.value = ""
-                answerSite.textContent = textBad;
-                break;
-            case "ты кто?", "ты кто ?":
-                question.textContent = "";
-                answerUser.value = ""
-                answerSite.textContent = "Да хуй знает";
-                break;
-            default:
-                question.textContent = textQuestion;
-                answerSite.textContent = testHome;
-                break;
-        }
+        functionAnswer();
     }
 });
+
+function functionAnswer() {
+    let auvtlc = answerUser.value.toLowerCase();
+    if (auvtlc == "хорошо" || auvtlc == "нормально") {
+        question.textContent = "";
+        answerUser.value = ""
+        answerSite.textContent = testGood;
+    } else if(auvtlc == "плохо" || auvtlc == "хреново"){
+        question.textContent = "";
+        answerUser.value = ""
+        answerSite.textContent = textBad;
+    } else if(auvtlc == "ты кто?" || auvtlc == "ты кто ?"){
+        question.textContent = "";
+        answerUser.value = ""
+        answerSite.textContent = "Да хуй знает";
+    } else {
+        question.textContent = textQuestion;
+        answerSite.textContent = testHome;
+    }
+}
