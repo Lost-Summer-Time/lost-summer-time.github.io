@@ -4,7 +4,6 @@ switch (langSite) {
     case "en":
         langEn()
         break;
-
     default: // ru
         langRu()
         break;
