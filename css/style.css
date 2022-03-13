@@ -81,6 +81,7 @@ input {
     border: 1px solid;
     padding: 2px;
     outline: none;
+    user-select: auto;
 }
 
 p {
