@@ -55,7 +55,7 @@ html, body {
 }
 
 body, header, main, footer, 
-div, nav, ul, li, a {
+div, nav, ul, li, a, span {
     display: flex;
 }
 
@@ -65,6 +65,13 @@ html {
 
 ul {
     list-style-type: none;
+}
+
+a {
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 svg {

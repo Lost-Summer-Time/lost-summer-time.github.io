@@ -60,11 +60,6 @@ li {
     height: 30px;
 }
 
-a {
-    align-items: center;
-    text-decoration: none;
-}
-
 main div nav ul li a span svg {
     margin-right: 12px;
 }
