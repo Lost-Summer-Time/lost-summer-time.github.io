@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/black/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/black/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/black/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/pc.css" id="css">
+        <script src="/js/player-audio.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="flex-direction: column;">
+            <span>Имя: Неизвестно</span>
+            <span>lvl: 0</span>
+            <span>Ранг: 0</span>
+            <span>Класс: Неизвестно</span>
+            <span>Звание: Незнакомец</span>
+        </div>
+        <!-- audio -->
+        <div>
+            <div class="audio" data-audio-id="1">
+                <button onclick="let thisParentNode = this.parentNode; audioPlayAndPause(thisParentNode)">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                        <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" style="position: absolute; left: 0;" class="displayNone">
+                        <path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z"/>
+                    </svg>
+                </button>
+                <div style="flex-direction: column; justify-content: center;">
+                    <div>
+                        <p>90s Flav - Call me</p>
+                        <p><span id="currentTime">0:00</span> / <span id="allTime">0:00</span></p>
+                    </div>
+                    <input type="range" name="" id="rangeAudio" min="0" value="0" style="width: 100%">
+                </div>
+                <div>
+                    <button>--</button>
+                </div>
+            </div>
+        </div>
+        <!-- video -->
+        <div>
+            <div>
+                <video src=""></video>
+            </div>
+        </div>
+    </body>
+</html>

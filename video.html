@@ -171,11 +171,38 @@
 						</ul>
 					</nav>
 				</div>
-				<div id="content" style="flex-direction: column; align-items: center; justify-content: center;">
-					<p style="text-align: center; white-space: pre-line;" id="answer-site"></p>
-					<p style="margin-top: 12px;" id="question"></p>
-					<input style="margin-top: 12px; text-align: center;" type="text" name="answer-user" id="answer-user" aria-keyshortcuts="" accesskey="Enter">
-					<button style="padding: 12px;" onclick="functionAnswer()">Ответить</button>
+				<div id="content" style="flex-direction: column;">
+
+					<div class="video" data-video-id="1">
+                  <video id="video" src="/mp4/АДСКИЙ БОСС ПИЛОТ - НА РУССКОМ   HELLUVA BOSS PILOT - RUS.mp4"></video>
+                  <div class="divHover">
+                     <div class="divHoverMenu">
+                        <div style="height: 4px; margin-bottom: 12px;">
+                           <div class="timeLineVideo"></div>
+                        </div>
+                        <div class="videoButton">
+                           <button onclick='document.getElementById("video").play();'>
+                              <span class="play">
+                                 <svg height="24px" viewBox="0 0 24 24" width="24px">
+                                    <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
+                                 </svg>
+                              </span>
+                              <span class="displayNone pause">
+                                 <svg height="24px" viewBox="0 0 24 24" width="24px">
+                                    <path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z"/>
+                                 </svg>
+                              </span>
+                           </button>
+                           <p style="margin-left: 12px;">
+                              <span class="currentTime" id="currentTime">0:00</span>
+                              <span> / </span>
+                              <span class="allTime" id="allTime">0:00</span>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+					</div>
+
 				</div>
 			</main>
 			<footer>
@@ -183,6 +210,7 @@
 			</footer>
 			<script src="/js/lang.js"></script>
 		</div>
+
 		<!-- phone -->
 		<div id="phone">
 			<script>
@@ -359,6 +387,5 @@
 				</div>
 			</footer>
 		</div>
-		<script src="/js/answer.js"></script>
 	</body>
 </html>

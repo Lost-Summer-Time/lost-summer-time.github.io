@@ -38,63 +38,76 @@ let isDialogue = false;
 const canNotAnswer = "Находится в разбаботке";
 
 let answerSite = document.getElementById("answer-site");
-answerSite.textContent = testHome;
 let answerUser = document.getElementById("answer-user");
 let question = document.getElementById("question");
+
+answerSite.textContent = testHome;
 question.textContent = textQuestion;
 
 function functionAnswer() {
-    let auvtlc = answerUser.value.toLowerCase().trimEnd();
-    let astc = answerSite.textContent;
-    if (isDialogue) {
-        // диалог А как твои дела ?
-        if (astc == textHowAreYou) {
-            if (auvtlc == "да") {
-                question.textContent = "";
-                answerUser.value = "";
-                answerSite.textContent = textHowAreYou_Yes;
-            } else {
-                question.textContent = "";
-                answerUser.value = "";
-                answerSite.textContent = textHowAreYou_No;
-            }
-            isDialogue = false;
-        }
-    } else {
-        if (niktox2.includes(auvtlc)) {
-            question.textContent = "";
-            answerUser.value = "";
-            answerSite.textContent = textNiktox2;
-        } else if (auvtlc == valeria) {
-            
-        } else if (auvtlc == valerianx2) {
-            
-        } else if (auvtlc == gocciolinna) {
-            
-        } else if (auvtlc == chaos_02) {
-            
-        } else if (good.includes(auvtlc)) {
-            question.textContent = "";
-            answerUser.value = "";
-            answerSite.textContent = testGood;
-        } else if (bad.includes(auvtlc)) {
-            question.textContent = "";
-            answerUser.value = "";
-            answerSite.textContent = textBad;
-        } else if(whoAreYou.includes(auvtlc)) {
-            question.textContent = "";
-            answerUser.value = "";
-            answerSite.textContent = textWhoAreYou;
-        } else if(howAreYou.includes(auvtlc)) {
-            question.textContent = "";
-            answerUser.value = "";
-            answerSite.textContent = textHowAreYou;
-            isDialogue = true;
-        } else {
-            question.textContent = textQuestion;
-            answerSite.textContent = testHome;
-        }
-    }
+	let auvtlc = answerUser.value.toLowerCase().trimEnd();
+	let astc = answerSite.textContent;
+	if (isDialogue) {
+		// диалог А как твои дела ?
+		if (astc == textHowAreYou) {
+			if (auvtlc == "да") {
+				question.textContent = "";
+				answerUser.value = "";
+				answerSite.textContent = textHowAreYou_Yes;
+			} else {
+				question.textContent = "";
+				answerUser.value = "";
+				answerSite.textContent = textHowAreYou_No;
+			}
+			isDialogue = false;
+		}
+	} else {
+		if (niktox2.includes(auvtlc)) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textNiktox2;
+		} else if (auvtlc == valeria) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textValeria;
+		} else if (auvtlc == valerianx2) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textValeriaNX2;
+		} else if (auvtlc == gocciolinna) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textGocciolinna;
+		} else if (auvtlc == chaos_02) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textChaos_02;
+		} else if (good.includes(auvtlc)) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = testGood;
+		} else if (bad.includes(auvtlc)) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textBad;
+		} else if(whoAreYou.includes(auvtlc)) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textWhoAreYou;
+		} else if(howAreYou.includes(auvtlc)) {
+			question.textContent = "";
+			answerUser.value = "";
+			answerSite.textContent = textHowAreYou;
+			isDialogue = true;
+		} else {
+			question.textContent = textQuestion;
+			answerSite.textContent = testHome;
+		}
+	}
 }
 
-answerUser.addEventListener("keyup", function(event) { if (event.code == "Enter" || event.key == "Enter") {functionAnswer();}});
+answerUser.addEventListener("keyup", function(event) { 
+	if (event.code == "Enter" || event.key == "Enter") {
+		functionAnswer();
+	}
+});

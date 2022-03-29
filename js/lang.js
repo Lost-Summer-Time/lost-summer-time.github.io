@@ -1,12 +1,12 @@
 let langSite = document.documentElement.getAttribute("lang");
 
 switch (langSite) {
-    case "en":
-        langEn()
-        break;
-    default: // ru
-        langRu()
-        break;
+	case "en":
+		langEn()
+		break;
+	default: // ru
+		langRu()
+		break;
 }
 
 const home = ["Главная", "Home"];
@@ -34,41 +34,41 @@ let menu_apps = document.getElementById("lang-apps");
 let menu_settings = document.getElementById("lang-settings");
 
 function langRu() {
-    if (langSite == "ru") {
-        ;
-    } else {
-        document.documentElement.setAttribute("lang", "ru");
-        langSite = document.documentElement.getAttribute("lang");
-        menu_home.textContent = home[0];
-        menu_profile.textContent = profile[0];
-        menu_messages.textContent = messages[0];
-        menu_groups.textContent = groups[0];
-        menu_music.textContent = music[0];
-        menu_video.textContent = video[0];
-        menu_story.textContent = story[0];
-        //menu_windows.textContent = windows[0];
-        menu_games.textContent = games[0];
-        menu_apps.textContent = apps[0];
-        menu_settings.textContent = settings[0];
-    }
+	if (langSite == "ru") {
+		;
+	} else {
+		document.documentElement.setAttribute("lang", "ru");
+		langSite = document.documentElement.getAttribute("lang");
+		menu_home.textContent = home[0];
+		menu_profile.textContent = profile[0];
+		menu_messages.textContent = messages[0];
+		menu_groups.textContent = groups[0];
+		menu_music.textContent = music[0];
+		menu_video.textContent = video[0];
+		menu_story.textContent = story[0];
+		//menu_windows.textContent = windows[0];
+		menu_games.textContent = games[0];
+		menu_apps.textContent = apps[0];
+		menu_settings.textContent = settings[0];
+	}
 };
 
 function langEn() {
-    if (langSite == "en") {
-        ;
-    } else {
-        document.documentElement.setAttribute("lang", "en");
-        langSite = document.documentElement.getAttribute("lang");
-        menu_home.textContent = home[1];
-        menu_profile.textContent = profile[1];
-        menu_messages.textContent = messages[1];
-        menu_groups.textContent = groups[1];
-        menu_music.textContent = music[1];
-        menu_video.textContent = video[1];
-        menu_story.textContent = story[1];
-        //menu_windows.textContent = windows[1];
-        menu_games.textContent = games[1];
-        menu_apps.textContent = apps[1];
-        menu_settings.textContent = settings[1];
-    }
+	if (langSite == "en") {
+		;
+	} else {
+		document.documentElement.setAttribute("lang", "en");
+		langSite = document.documentElement.getAttribute("lang");
+		menu_home.textContent = home[1];
+		menu_profile.textContent = profile[1];
+		menu_messages.textContent = messages[1];
+		menu_groups.textContent = groups[1];
+		menu_music.textContent = music[1];
+		menu_video.textContent = video[1];
+		menu_story.textContent = story[1];
+		//menu_windows.textContent = windows[1];
+		menu_games.textContent = games[1];
+		menu_apps.textContent = apps[1];
+		menu_settings.textContent = settings[1];
+	}
 }
