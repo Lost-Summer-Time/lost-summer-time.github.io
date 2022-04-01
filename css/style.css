@@ -7,38 +7,6 @@
 --- --- --- --- ---
 */
 
-html[data-theme="black"] {
-	--background: rgb(0, 0, 0);
-	--color: rgb(255, 255, 255);
-	--svg: rgb(255, 255, 255);
-	--cursor: url(/img/icon/light/cursor.png);
-}
-
-html[data-theme='dark'] {
-	--background: rgb(16, 16, 16);
-	--color: rgb(255, 255, 255);
-	--svg: rgb(255, 255, 255);
-	--cursor: url(/img/icon/light/cursor.png);
-}
-
-html[data-theme="white"] {
-	--background: rgb(255, 255, 255);
-	--color: rgb(0, 0, 0);
-	--svg: rgb(0, 0, 0);
-	--cursor: url(/img/icon/light/cursor.png);
-}
-
-html[data-theme='light'] {
-	--background: rgb(16, 16, 16);
-	--color: rgb(255, 255, 255);
-	--svg: rgb(255, 255, 255);
-	--cursor: url(/img/icon/dark/cursor.png);
-}
-
-/*
---- --- --- --- ---
-*/
-
 *, *::after, *::before {
 	margin: 0;
 	padding: 0;
@@ -48,6 +16,11 @@ html[data-theme='light'] {
 	/*font-size: 1rem;*/
 	color: var(--color);
 	user-select: none;
+}
+
+*::selection {
+	background-color: var(--color);
+	color: var(--background);
 }
 
 html, body {
@@ -120,4 +93,12 @@ p {
 
 .displayNone{
 	display: none;
+}
+
+.mr12 {
+	margin-right: 12px;
+}
+
+div.fix {
+	flex-direction: column;
 }

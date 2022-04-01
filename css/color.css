@@ -1,0 +1,52 @@
+html[data-theme="black"] {
+	--background: rgb(0, 0, 0);
+	--color: rgb(255, 255, 255);
+	--svg: rgb(255, 255, 255);
+	--cursor: url("/cursor/white/cursor.png");
+}
+
+html[data-theme='dark'] {
+	--background: rgb(16, 16, 16);
+	--color: rgb(255, 255, 255);
+	--svg: rgb(255, 255, 255);
+	--cursor: url("/cursor/white/cursor.png");
+}
+
+html[data-theme='black'] .icon-home::after,
+html[data-theme='dark'] .icon-home::after {
+	content: url("/icon/white/home.svg");
+}
+
+html[data-theme='black'] .icon-account_circle::after,
+html[data-theme='dark'] .icon-account_circle::after {
+	content: url("/icon/white/account_circle.svg");
+}
+
+.icon-chat::after {
+	content: url("/icon/white/chat.svg");
+}
+
+.icon-size {
+   height: 24px;
+	width: 24px;
+}
+
+/*
+--- --- --- --- ---
+*/
+
+html[data-theme="white"] {
+	--background: rgb(255, 255, 255);
+	--color: rgb(0, 0, 0);
+	--svg: rgb(0, 0, 0);
+	--cursor: url("/cursor/black/cursor.png");
+}
+
+/*
+--- --- --- --- ---
+*/
+
+:root {
+	--niktox2_1: #141004;
+	--niktox2_2: #120503;
+}

@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="dark">
 	<head>
-		<title>Главная</title>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Видео</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/black/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/black/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/black/favicon-16x16.png">
 		<link rel="manifest" href="/favicon/manifest.json">
+		<link rel="stylesheet" href="/css/color.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/pc.css" id="css">
-		<script>let phoneSize = 430;</script>
+		<script src="/js/DOMContentLoaded.js"></script>
 	</head>
 	<body>
 		<!-- pc -->
 		<div id="pc">
-			<script>
-				if (document.body.clientWidth <= phoneSize) {
-					document.getElementById("css").href = "/css/phone.css";
-					document.getElementById("pc").remove();
-				}
-			</script>
 			<header>
 				<!-- <p>Lost Summer Time</p> -->
 			</header>
@@ -174,7 +169,11 @@
 				<div id="content" style="flex-direction: column;">
 
 					<div class="video" data-video-id="1">
-                  <video id="video" src="/mp4/АДСКИЙ БОСС ПИЛОТ - НА РУССКОМ   HELLUVA BOSS PILOT - RUS.mp4"></video>
+                  <video id="video">
+							<source src="/mp4/АДСКИЙ БОСС ПИЛОТ - НА РУССКОМ   HELLUVA BOSS PILOT - RUS.mp4">
+							<source src="">
+							<p>Ваш браузер не поддерживает .mp4 и .webm</p>
+						</video>
                   <div class="divHover">
                      <div class="divHoverMenu">
                         <div style="height: 4px; margin-bottom: 12px;">
@@ -213,11 +212,6 @@
 
 		<!-- phone -->
 		<div id="phone">
-			<script>
-				if (document.body.clientWidth > phoneSize) {
-					document.getElementById("phone").remove();
-				}
-			</script>
 			<header>
 				<div>Lost Summer Time</div>
 			</header>
