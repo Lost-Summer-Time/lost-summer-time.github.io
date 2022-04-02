@@ -1,4 +1,4 @@
-header, main, footer, nav, ul, li {
+header, main, footer, nav, ul {
 	width: 100%;
 }
 
@@ -7,7 +7,7 @@ header, footer {
 	left: 0;
 }
 
-header, main, li {
+header, main {
 	justify-content: center;
 }
 
@@ -30,15 +30,15 @@ footer {
 	bottom: 12px;
 }
 
-svg {
-	width: 30px;
-	height: 30px;
-}
-
 #phone {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
+}
+
+.icon {
+   height: 30px;
+	width: 30px;
 }
 
 /**/
@@ -52,25 +52,13 @@ svg {
 	overflow-y: auto;
 	scrollbar-width: none;
 }
-#menu-add nav{
-	padding: 0 6%;
+
+#menu li {
+	justify-content: center;
+	padding: 0 0;
 }
+
 #menu-add::-webkit-scrollbar {
 	width: 0;
 	height: 0;
 }
-.displayNone {
-	display: none;
-}
-/*
-#menu-add nav ul li {
-	height: 40px;
-}*/
-/*
-#menu-add nav ul li a span{
-	margin-right: 4px;
-}*/
-
-/*
-border-top: 1px solid white; border-bottom: 1px solid white;
-*/

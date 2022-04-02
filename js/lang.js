@@ -21,6 +21,8 @@ const games = ["Игры", "Games"];
 const apps = ["Приложения", "Apps"];
 const settings = ["Настройки", "Settings"];
 
+let title_home = document.getElementById("lang-title")
+
 let menu_home = document.getElementById("lang-home");
 let menu_profile = document.getElementById("lang-profile");
 let menu_messages = document.getElementById("lang-messages");
@@ -39,6 +41,9 @@ function langRu() {
 	} else {
 		document.documentElement.setAttribute("lang", "ru");
 		langSite = document.documentElement.getAttribute("lang");
+
+		title_home.textContent = home[0];
+
 		menu_home.textContent = home[0];
 		menu_profile.textContent = profile[0];
 		menu_messages.textContent = messages[0];
@@ -59,6 +64,9 @@ function langEn() {
 	} else {
 		document.documentElement.setAttribute("lang", "en");
 		langSite = document.documentElement.getAttribute("lang");
+
+		title_home.textContent = home[1];
+
 		menu_home.textContent = home[1];
 		menu_profile.textContent = profile[1];
 		menu_messages.textContent = messages[1];

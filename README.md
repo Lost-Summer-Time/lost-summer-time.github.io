@@ -10,3 +10,6 @@
 
 ### Шрифт | Font 
 - Roboto
+
+### Иконки | Icon 
+- Google

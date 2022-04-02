@@ -1,0 +1,14 @@
+@font-face {
+	font-family: "Roboto";
+	src: url(/font/Roboto-Light.ttf);
+}
+
+*, *::after, *::before {
+	font-family: "Roboto";
+	font-size: 1rem;
+}
+
+*::selection {
+	background-color: var(--color);
+	color: var(--background);
+}
