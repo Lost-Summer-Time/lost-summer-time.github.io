@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title id="lang-title">Главная</title>
+		<title id="lang-title">Аудио</title>
 
 		<link rel="apple-touch-icon" href="/favicon/black/apple-touch-icon.png" sizes="180x180">
 		<link rel="icon" href="/favicon/black/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -21,8 +21,8 @@
 		<link rel="stylesheet" href="/css/pc.css" id="css-device">
 
 		<script src="/js/set-icon-svg.js"></script>
+		<script src="/js/player-audio.js"></script>
 		<script src="/js/core.js"></script>
-		<script src="/js/answer.js" defer></script>
 		<script src="/js/lang.js" defer></script>
 
 	</head>
@@ -125,33 +125,39 @@
 				</nav>
 			</div>
 
-			<div class="fix" id="content">
+			<div class="fix" style="width: 100%; margin-left: 12px;">
 
-				<div class="dialogue">
-					<p id="answer"></p>
-					<label>
-						<input type="text" id="answer-user" class="fix" maxlength="20" placeholder="" aria-keyshortcuts="" accesskey="Enter" autocapitalize="on" autocomplete="off" inputmode="latin">
-						<button class="fix" onclick="functionAnswer()">
-							<span class="icon">send</span>
-						</button>
-					</label>
-				</div>
+				<div class="audio">
+               <audio src=""></audio>
+               <button onclick="functionAudio(thisParentNode = this.parentNode)">
+                  <span class="icon play">play</span>
+               </button>
+               <div class="fix" style="min-width: 300px;">
+                  <div style="justify-content: space-between">
+                     <span class="music-name"></span>
+                     <span class="time"></span>
+                  </div>
+                  <div style="margin-top: 12px;">
+                     <span class="line">
+                        <span class="point"></span>
+                     </span>
+                  </div>
+               </div>
+               <div style="min-width: 100px;">
+                  <span class="line">
+                     <span class="point"></span>
+                  </span>
+               </div>
+               <button>
+                  <span class="icon">stop</span>
+               </button>
+            </div>
 
 			</div>
 		</main>
 
 		<main class="phone hide">
 			<div class="fix" id="content">
-
-				<div class="dialogue">
-					<p id="answer"></p>
-					<label>
-						<input type="text" id="answer-user" class="fix" maxlength="20" placeholder="" aria-keyshortcuts="" accesskey="Enter" autocapitalize="on" autocomplete="off" inputmode="latin">
-						<button class="fix" onclick="functionAnswer()">
-							<span class="icon">send</span>
-						</button>
-					</label>
-				</div>
 
 			</div>
 		</main>

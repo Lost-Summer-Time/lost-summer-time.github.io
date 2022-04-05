@@ -25,6 +25,7 @@ button {
 	min-height: 110px;
 	flex-direction: column;
 	align-items: center;
+	line-height: 1.3;
 }
 
 .icon {

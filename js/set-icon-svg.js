@@ -11,7 +11,11 @@ function setIconSVG() {
          iconApps = "M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z",
          iconSettings = "M19.5,12c0-0.23-0.01-0.45-0.03-0.68l1.86-1.41c0.4-0.3,0.51-0.86,0.26-1.3l-1.87-3.23c-0.25-0.44-0.79-0.62-1.25-0.42 l-2.15,0.91c-0.37-0.26-0.76-0.49-1.17-0.68l-0.29-2.31C14.8,2.38,14.37,2,13.87,2h-3.73C9.63,2,9.2,2.38,9.14,2.88L8.85,5.19 c-0.41,0.19-0.8,0.42-1.17,0.68L5.53,4.96c-0.46-0.2-1-0.02-1.25,0.42L2.41,8.62c-0.25,0.44-0.14,0.99,0.26,1.3l1.86,1.41 C4.51,11.55,4.5,11.77,4.5,12s0.01,0.45,0.03,0.68l-1.86,1.41c-0.4,0.3-0.51,0.86-0.26,1.3l1.87,3.23c0.25,0.44,0.79,0.62,1.25,0.42 l2.15-0.91c0.37,0.26,0.76,0.49,1.17,0.68l0.29,2.31C9.2,21.62,9.63,22,10.13,22h3.73c0.5,0,0.93-0.38,0.99-0.88l0.29-2.31 c0.41-0.19,0.8-0.42,1.17-0.68l2.15,0.91c0.46,0.2,1,0.02,1.25-0.42l1.87-3.23c0.25-0.44,0.14-0.99-0.26-1.3l-1.86-1.41 C19.49,12.45,19.5,12.23,19.5,12z M12.04,15.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5S13.97,15.5,12.04,15.5z",
          iconSend = "M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z",
-         iconMenu = "M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"
+         iconMenu = "M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z",
+         iconPlayArrow = "M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z",
+         iconPause = "M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z",
+         iconStop = "M8 6h8c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z",
+         ttttt = ""
 
    let documentIcon = document.querySelectorAll(".icon"),
       i = 0
@@ -25,19 +29,22 @@ function setIconSVG() {
 
       switch (icon.textContent) {
          case "home": setSvg(setIcon = iconHome); break;
-         case "account_circle": setSvg(setIcon = iconAccountСircle); break;
+         case "account": setSvg(setIcon = iconAccountСircle); break;
          case "message": setSvg(setIcon = iconMessage); break;
          case "group": setSvg(setIcon = iconGroup); break;
-         case "library_music": setSvg(setIcon = iconLibraryMusic); break;
-         case "video_library": setSvg(setIcon = iconVideoLibrary); break;
-         case "library_books": setSvg(setIcon = iconLibraryBooks); break;
-         case "desktop_windows": setSvg(setIcon = iconDesktopWindows); break;
+         case "library-music": setSvg(setIcon = iconLibraryMusic); break;
+         case "video-library": setSvg(setIcon = iconVideoLibrary); break;
+         case "library-books": setSvg(setIcon = iconLibraryBooks); break;
+         case "desktop-windows": setSvg(setIcon = iconDesktopWindows); break;
          case "games": setSvg(setIcon = iconGames); break;
          case "apps": setSvg(setIcon = iconApps); break;
          case "settings": setSvg(setIcon = iconSettings); break;
          case "send": setSvg(setIcon = iconSend); break;
          case "menu": setSvg(setIcon = iconMenu); break;
-         default: console.log("Иконка не найдена"); break;
+         case "play": setSvg(setIcon = iconPlayArrow); break;
+         case "pause": setSvg(setIcon = iconPause); break;
+         case "stop": setSvg(setIcon = iconStop); break;
+         default: break; //console.log("Иконка не найдена");
       }
 
       function setSvg(setIcon) {

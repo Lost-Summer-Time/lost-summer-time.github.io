@@ -1,103 +1,75 @@
-const testHome = "Виии\nЭто главная страничка\nДа, осмотрись, пожамкай на все";
-const testGood = "О, это отлично\nНадеюсь тебе ничего не испортят)";
-const textBad = "Жаль что так вышло,\nнадеюсь у вас все наладиться";
-const textQuestion = "Как у тебя дела?";
-const textWhoAreYou = "Я?\nНу как тебе сказать\nЯ - то что видишь";
+const testHome = "Виии\nЭто главная страничка\nДа, осмотрись, пожамкай на все",
+		testGood = "О, это отлично\nНадеюсь тебе ничего не испортят)",
+		textBad = "Жаль что так вышло,\nнадеюсь у вас все наладиться",
+		textQuestion = "Как у тебя дела?",
+		textWhoAreYou = "Я?\nНу как тебе сказать\nЯ - то что видишь",
+		textHowAreYou = "А?\nТебе интересно как у меня дела?",
+		textHowAreYou_Yes = "Да?\nТебе интересно?\nНу.. все хорошо?",
+		textHowAreYou_No = "А, угу, ладно",
+		textAreYouReady = "Ты готов?\nК чему? Взлету?\nНет, падению",
+		textNiktox2 = "О, хай создатель\nЕсли это ты, а не кто-то тобой притворяется"
 
-const textHowAreYou = "А?\nТебе интересно как у меня дела?";
-const textHowAreYou_Yes = "Да?\nТебе интересно?\nНу.. все хорошо?";
-const textHowAreYou_No = "А, угу, хорошо";
+const nx2Valeria = "nx2_valeria",
+		nx2Gocciolinna = "nx2_gocciolinna",
+		nx2Chaos_02 = "nx2_chaos_02",
+		nx2Alya2702 = "nx2_alya2702",
+		nx2Rong = "nx2_rong"
 
-const niktox2 = ["niktox2", "никтох2"];
-const textNiktox2 = "О, хай создатель\nЕсли это ты, а не кто-то тобой притворяется";
+const textNx2Valeria = "Котииик, привет!\nЯ не придумал что-то гениального..\nТак что...\nЯ тебя люблю (^///^)",
+		textNx2Gocciolinna = "Соофиии!\nПривет, как жизнь?",
+		textNx2Chaos_02 = "О, привет Хаусик\nНу или Англенин, если не нравится Хаус",
+		textNx2Alya2702 = "О, хай Ал\nКак настроение?",
+		textNx2Rong = "Ооо, Вася зашел на сайт\nНу как, нравится?"
 
-const valeria = "valeria",
-      textValeria = "",
-      valerianx2 = "valerianx2",
-      textValeriaNX2 = "";
+const niktox2 = ["niktox2", "никтох2"],
+		good = ["хорошо", "нормально", "отлично", "неплохо", "замечательно", "превосходно"],
+		bad = ["плохо", "хреново", "не очень", "дела не очень", "могло быть лучше"],
+		whoAreYou = ["ты кто?", "ты кто ?", "кто ты?", "кто ты ?"],
+		howAreYou = ["как у тебя дела?", "как дела?", "как твои?", "а твои?", "а как твои?", "как твои дела?"],
+		areYouReady = ["готов?", " ты готов?"]
 
-const gocciolinna = "gocciolinna";
-const textGocciolinna = "";
-
-const chaos_02 = "chaos_02";
-const textChaos_02 = "О, привет Хаусик\nНу или Англенин, если не нравится Хаус";
-
-const alya2702 = "alya2702";
-const textAlya2702 = "";
-
-const rong = "rong";
-const textRong = "rong";
-
-const good = ["хорошо", "нормально", "отлично", "неплохо"];
-const bad = ["плохо", "хреново", "не очень", "дела не очень", "могло быть лучше"];
-const whoAreYou = ["ты кто?", "ты кто ?", "кто ты?", "кто ты ?"];
-const howAreYou = ["как у тебя дела?", "как у тебя дела ?", "как дела?", "как дела ?", "как твои?", "как твои ?", "а твои?", "а твои ?", "а как твои?", "а как твои ?", "Как твои дела?", "Как твои дела ?"];
-
-let isDialogue = false;
-
-const canNotAnswer = "Находится в разбаботке";
-
-let answer = null;
-let answerUser = null;
+let isDialogue = false, answer = null, answerUser = null
 
 function functionAnswer() {
-	let auvtlc = answerUser.value.toLowerCase().trim();
-	let astc = answer.textContent;
+	let text = answerUser.value.toLowerCase().trim(),
+		textFix = `${text.substr(0, text.length - 2).trim()}?`,
+		newAnswer = answer.textContent;
+
+	text[text.length - 2] == " " ? text = textFix : null;
+
 	if (isDialogue) {
-		// диалог А как твои дела ?
-		if (astc == textHowAreYou) {
-			if (auvtlc == "да") {
-				answerUser.placeholder = "";
-				answerUser.value = "";
-				answer.textContent = textHowAreYou_Yes;
-			} else if (auvtlc == "нет") {
-				answerUser.placeholder = "";
-				answerUser.value = "";
-				answer.textContent = textHowAreYou_No;
-			}
-			isDialogue = false;
+		switch (newAnswer) {
+			case textHowAreYou:
+				text == "да" ? setAnswerText(setText = textHowAreYou_Yes) : setAnswerText(setText = textHowAreYou_No);
+				isDialogue = false; break;
+			default: resetAnswerText(); break;
 		}
 	} else {
-		if (niktox2.includes(auvtlc)) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textNiktox2;
-		} else if (auvtlc == valeria) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textValeria;
-		} else if (auvtlc == valerianx2) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textValeriaNX2;
-		} else if (auvtlc == gocciolinna) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textGocciolinna;
-		} else if (auvtlc == chaos_02) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textChaos_02;
-		} else if (good.includes(auvtlc)) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = testGood;
-		} else if (bad.includes(auvtlc)) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textBad;
-		} else if(whoAreYou.includes(auvtlc)) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textWhoAreYou;
-		} else if(howAreYou.includes(auvtlc)) {
-			answerUser.placeholder = "";
-			answerUser.value = "";
-			answer.textContent = textHowAreYou;
-			isDialogue = true;
-		} else {
-			answerUser.placeholder = textQuestion;
-			answer.textContent = testHome;
+		switch (text) {
+			case nx2Valeria: setAnswerText(setText = textNx2Valeria); break;
+			case nx2Gocciolinna: setAnswerText(setText = textNx2Gocciolinna); break;
+			case nx2Chaos_02: setAnswerText(setText = textNx2Chaos_02); break;
+			case nx2Alya2702: setAnswerText(setText = textNx2Alya2702); break;
+			case nx2Rong: setAnswerText(setText = textNx2Rong); break;
+			default:
+				switch (true) {
+					case good.includes(text): setAnswerText(setText = testGood); break;
+					case bad.includes(text): setAnswerText(setText = textBad); break;
+					case whoAreYou.includes(text): setAnswerText(setText = textWhoAreYou); break;
+					case howAreYou.includes(text): setAnswerText(setText = textHowAreYou, setPlaceholder = "Да / Нет"); isDialogue = true; break;
+					default: resetAnswerText(); break;
+				}
 		}
 	}
+}
+
+function setAnswerText(setText, setPlaceholder = "") {
+	answerUser.placeholder = setPlaceholder;
+	answerUser.value = "";
+	answer.textContent = setText;
+}
+
+function resetAnswerText() {
+	answerUser.placeholder = textQuestion;
+	answer.textContent = testHome;
 }

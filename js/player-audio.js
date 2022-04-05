@@ -1,87 +1,47 @@
-let thisParentNode = null;
+function functionAudio(thisParentNode) {
+	playPause(main = thisParentNode, audio = thisParentNode.querySelector("audio"));
+}
 
-let audio = null;
-let audioFix = null;
-let audioDuration = null;
-let isPlay = null;
-let interval = null;
-
-let isTpn = null;
-let tpn = null; // thisParentNode
-let tpnAudio = null;
-let tpnAudioCurrentTime = null;
-let tpnAudioAllTime = null;
-let tpnAudioScrollbarAudio = null;
-let tpnTimeline = null;
-let tpnVolumeSlider = null;
-
-function startAudio(thisParentNode) {
-	if (isTpn == null) {
-		tpn = thisParentNode;
-		setAll();
-		isTpn = "set";
-	} else {
-		tpn = thisParentNode;
-		if (tpn.attributes[1].nodeValue != audioFix) {
-			setAll();
+function playPause(main, audio) {
+	let interval;
+	if (audio.attributes.src.value != "") {
+		if (audio.duration > 0 && !audio.paused) {
+			audio.pause();
+			clearInterval(interval);
+			main.querySelector(".stop").classList.toggle("play")
+			main.querySelector(".stop").textContent = "play";
+			main.querySelector(".stop").classList.toggle("stop")
+			setIconSVG()
+		} else {
+			audio.play();
+			interval = setInterval(setCurrentTime, 1000, main, audio);
+			main.querySelector(".play").classList.toggle("stop")
+			main.querySelector(".play").textContent = "stop";
+			main.querySelector(".play").classList.toggle("play")
+			setIconSVG()
 		}
 	}
-	setAllTime();
-	playPause();
 }
 
-function setAll() {
-	tpnAudio = tpn.childNodes[1];
-	audio = tpnAudio;
-	audioFix = tpn.attributes[1].nodeValue;
-	tpnAudioCurrentTime = tpn.querySelector(".currentTime");
-	tpnAudioAllTime = tpn.querySelector(".allTime");
-	tpnAudioScrollbarAudio = tpn.querySelector(".timeScrollbar");
-	tpnTimeline = tpn.querySelector(".timeline");
-	tpnVolumeSlider = tpn.querySelector(".volumeSlider");
+function setCurrentTime(main , audio) {
+	main.querySelector(".time").textContent = fixTime(time = Math.round(audio.currentTime));
+	main.querySelector(".point").style.left = `${Math.round(audio.currentTime) / Math.round(audio.duration) * 100}%`;
 }
 
-function playPause() {
-	if (isPlay) {
-		audio.pause();
-		tpn.querySelector(".play").classList.toggle("displayNone");
-		tpn.querySelector(".pause").classList.toggle("displayNone");
-		isPlay = false;
-		clearInterval(interval);
-	} else {
-		audio.play();
-		tpn.querySelector(".play").classList.toggle("displayNone");
-		tpn.querySelector(".pause").classList.toggle("displayNone");
-		isPlay = true;
-		interval = setInterval(setCurrentTime, 1000);
-	}
-}
-
-function setAllTime() {
-	let text = tpnAudioAllTime;
-	let time = Math.round(audio.duration);
-	text.textContent = countingTime(time);
-}
-
-function setCurrentTime() {
-	let text = tpnAudioCurrentTime;
-	let time = Math.round(audio.currentTime);
-	text.textContent = countingTime(time);
-	tpnAudioScrollbarAudio.style.left = ( time / Math.round(audio.duration) ) * 100 + "%";
-}
-
-function countingTime(time) {
+function fixTime(time) {
 	let minutes = parseInt(time / 60);
 	let seconds = time - (60 * minutes)
-	if (seconds < 10) {
-		return minutes + ":0" + seconds;
-	} else {
-		return minutes + ":" + seconds;
-	}
+	let result = seconds < 10 ? `${minutes}:0${seconds}` : `${minutes}:${seconds}`;
+	return result;
 }
-
-function setAudioVolume() {
+/*
+function setAudioVolume(audio) {
    if (audio) {
       audio.volume = xxx / 100
    }
 }
+//setCurrentTime(main = thisParentNode, audio = thisParentNode.querySelector("audio"));
+function setAllTime(main) {
+	main.querySelector(".all-time").textContent = fixTime(time = Math.round(audio.duration));
+}
+*/
