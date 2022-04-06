@@ -73,14 +73,16 @@ li {
 	align-items: center;
 }
 
-.audio .line {
+.audio .line,
+.video .line {
 	height: 2px;
 	width: 100%;
 	position: relative;
 	background-color: var(--line);
 }
 
-.audio .line .point {
+.audio .line .point,
+.video .line .point {
 	height: 6px;
 	width: 6px;
 	bottom: -2px;
@@ -93,12 +95,16 @@ li {
 	position: relative;
 }
 
-.video .line {
-
+.video .hover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	justify-content: flex-end
 }
 
-.video .line .point {
-
+.video .hover:hover {
+	opacity: 1;
 }
 
 /*

@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title id="lang-title">Аудио</title>
+		<title id="lang-title">Видео</title>
 
 		<link rel="apple-touch-icon" href="/favicon/black/apple-touch-icon.png" sizes="180x180">
 		<link rel="icon" href="/favicon/black/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="/css/pc.css" id="css-device">
 
 		<script src="/js/set-icon-svg.js"></script>
-		<script src="/js/player-audio.js"></script>
+      <script src="/js/player-video.js"></script>
 		<script src="/js/storage.js"></script>
 		<script src="/js/lang.js"></script>
 		<script src="/js/core.js"></script>
@@ -126,44 +126,30 @@
 				</nav>
 			</div>
 
-			<div id="content" style="flex-direction: column;">
+			<div class="fix" id="content">
 
-				<div>
-					<div>
-						<p>Всего музыки:
-							<span>&nbsp;</span>
-							<span>0</span>
-						</p>
-					</div>
-					<div style="margin-left: 12px;">
-						<p title="В разработке">Фильтр ></p>
-					</div>
-				</div>
-
-            <div class="audio">
-               <audio src=""></audio>
-               <button onclick="functionAudio(thisParentNode = this.parentNode)">
-                  <span class="icon play">play</span>
-               </button>
-               <div class="fix" style="min-width: 300px;">
-                  <div style="justify-content: space-between">
-                     <span class="music-name"></span>
-                     <span class="time"></span>
-                  </div>
-                  <div style="margin-top: 12px;">
-                     <span class="line">
-                        <span class="point"></span>
-                     </span>
-                  </div>
-               </div>
-               <div style="min-width: 100px;">
+            <div class="video">
+               <video src="" width="100%"></video>
+               <div class="hover fix">
                   <span class="line">
                      <span class="point"></span>
                   </span>
+                  <div style="justify-content: space-between">
+                     <div style="align-items: center;">
+                        <button onclick="">
+                           <span class="icon">play</span>
+                        </button>
+                        <p>
+                           <span>0:00</span> / <span>0:00</span>
+                        </p>
+                     </div>
+                     <div>
+                        <button onclick="">
+                           <span class="icon">fullscreen</span>
+                        </button>
+                     </div>
+                  </div>
                </div>
-               <button>
-                  <span class="icon">stop</span>
-               </button>
             </div>
 
 			</div>

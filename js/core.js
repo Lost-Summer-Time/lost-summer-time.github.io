@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
          }
       });
    }
+
+   getLang();
 });
 
 window.onload = function() {

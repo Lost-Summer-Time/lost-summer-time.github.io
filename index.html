@@ -21,9 +21,10 @@
 		<link rel="stylesheet" href="/css/pc.css" id="css-device">
 
 		<script src="/js/set-icon-svg.js"></script>
-		<script src="/js/core.js"></script>
 		<script src="/js/answer.js" defer></script>
-		<script src="/js/lang.js" defer></script>
+		<script src="/js/storage.js"></script>
+		<script src="/js/lang.js"></script>
+		<script src="/js/core.js"></script>
 
 	</head>
 	<body>
@@ -72,11 +73,11 @@
 						<li>
 							<a href="/audio.html">
 								<span class="icon mr12">library-music</span>
-								<span id="lang-music">Музыка</span>
+								<span id="lang-audio">Аудио</span>
 							</a>
 						</li>
 						<li>
-							<a href="/">
+							<a href="/video.html">
 								<span class="icon mr12">video-library</span>
 								<span id="lang-video">Видео</span>
 							</a>
@@ -94,7 +95,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/">
+							<a href="/game.html">
 								<span class="icon mr12">games</span>
 								<span id="lang-games">Игры</span>
 							</a>
@@ -112,8 +113,8 @@
 							</label>
 						</li>
 						<li style="justify-content: space-evenly">
-							<button class="fix" onclick="langRu();">Ru</button>
-							<button class="fix" onclick="langEn();">En</button>
+							<button class="fix" onclick="setLang(lang = this.textContent.toLowerCase());">Ru</button>
+							<button class="fix" onclick="setLang(lang = this.textContent.toLowerCase());">En</button>
 						</li>
 						<li>
 							<a href="/">
@@ -199,7 +200,7 @@
 									</a>
 								</li>
 								<li class="fix">
-									<a href="/">
+									<a href="/video.html">
 										<span class="icon mr12">video-library</span>
 										<span id="lang-video">Видео</span>
 									</a>
@@ -217,7 +218,7 @@
 									</a>
 								</li>
 								<li class="fix">
-									<a href="/">
+									<a href="/game.html">
 										<span class="icon mr12">games</span>
 										<span id="lang-games">Игры</span>
 									</a>
