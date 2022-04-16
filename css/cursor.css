@@ -2,7 +2,8 @@ html[data-theme='light'] {
 	--cursor: url(/cursor/black/cursor.png);
 }
 
-html[data-theme='dark'] {
+html[data-theme="black"],
+html[data-theme="dark"] {
 	--cursor: url(/cursor/white/cursor.png);
 }
 

@@ -6,8 +6,9 @@ let playerName = "", // имя
    playerBackpack = 10 // мах кол-во вещей в рюкзаке
 
 const textExplore = "Вы иследуюте местность",
-      textTavern = "Таверна",
-      textGuild = "Гильдия",
-      textStartGame = ""
+   textTavern = "Таверна",
+   textGuild = "Гильдия",
+   textStartGame = "",
+   textNoteNull = "Здеть твои записи\nПока что тут ничего нет"
 
 function setPlayerName(name) { playerName = name }
